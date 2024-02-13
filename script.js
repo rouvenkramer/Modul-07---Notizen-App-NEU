@@ -18,9 +18,25 @@ function render() {
 
                 <b>${note}</b>
 
-            </div>
+                <button id="delete" onclick="deleteNote(${i})">X</button>
 
+            </div>
 
 `;
     }
+}
+
+function saveNewNote(){
+
+    let newNote = document.getElementById('newNoteText');
+
+    notes.push(newNote.value);
+
+    render();
+
+}
+
+function deleteNote(i){
+notes.splice(i,1);
+render();
 }
