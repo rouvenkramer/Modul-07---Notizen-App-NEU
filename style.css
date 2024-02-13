@@ -1,0 +1,30 @@
+
+/*mark all divs with border*/
+
+* {
+    border: 1px solid #929292;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+
+.input {
+
+    box-sizing: border-box;
+    padding:3%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#newNoteText {
+    padding: 1em;
+    width:250px;
+    height:80px;
+    resize:none;
+}
