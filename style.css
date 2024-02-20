@@ -1,4 +1,3 @@
-
 /*mark all divs with border*/
 
 * {
@@ -18,7 +17,7 @@ body button {
 .input {
 
     box-sizing: border-box;
-    padding:3%;
+    padding: 3%;
 
     display: flex;
     flex-direction: column;
@@ -31,11 +30,29 @@ body button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
+    width: 30%;
 }
 
 #newNoteText {
     padding: 1em;
-    width:250px;
-    height:80px;
-    resize:none;
+    width: 100%;
+    height: 80px;
+    resize: none;
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    /* Adjust the space between items */
+}
+
+.note {
+    width: 300px;
+    height: 200px;
+    margin: 5px;
+
+
 }

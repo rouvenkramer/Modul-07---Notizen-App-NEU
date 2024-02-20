@@ -1,7 +1,9 @@
 
 //GLOBAL VARIABLES//
 
-let notes = ['note01', 'note02', 'note03'];
+let notes = [];
+let dates =[];
+load();
 
 
 function render() {
@@ -15,28 +17,58 @@ function render() {
         content.innerHTML += `
 
             <div class="note">
-
                 <b>${note}</b>
-
                 <button id="delete" onclick="deleteNote(${i})">X</button>
-
             </div>
-
 `;
     }
 }
 
-function saveNewNote(){
+function saveNewNote() {
 
     let newNote = document.getElementById('newNoteText');
-
     notes.push(newNote.value);
 
+    save();
     render();
+}
+
+function deleteNote(i) {
+
+    const yesDelete = confirm("delete note ?");
+    if (yesDelete) {
+
+        notes.splice(i, 1);
+        save();
+        render();
+    }
+    else { }
+}
+
+function save() {
+
+    let notesAsText = JSON.stringify(notes);
+    localStorage.setItem('notesAsTextSaved', notesAsText);
+}
+
+function load (){
+
+    let notesAsText = localStorage.getItem('notesAsTextSaved');
+    if(notesAsText){
+        notes = JSON.parse(notesAsText);
+    }
+    
+
+
 
 }
 
-function deleteNote(i){
-notes.splice(i,1);
-render();
+function getSaveDate(){
+    let now = new Date;
+    let datumAsString = now.toLocaleDateString('de-DE', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric'
+      });
+    console.log(datumAsString);
 }
