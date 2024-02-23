@@ -16,13 +16,24 @@
     <main>
         <section id="input" class="input">
 
-            <a id="trash" onclick="renderDeleted()">Trash</a>
-            <a id="home" onclick="render()">Home</a>
-
             <div id="inputBox" class="inputBox">
                 <textarea id="newNoteText" placeholder="neue Notiz"></textarea>
                 <button id="saveNewNote" onclick="saveNewNote()">save</button>
             </div>
+
+            <div class="appTitle">
+                <h1>TAKE NOTES</h1>
+
+                <div id="icons">
+                    <a id="home" onclick="render()"><img src="./img/notepad.png"></a>
+                    <a id="trash" onclick="renderDeleted()"><img src="./img/trashcan.png"></a>
+                </div>
+
+            </div>
+
+        
+
+
         </section>
 
         <section id="content">

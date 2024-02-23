@@ -12,50 +12,85 @@ body {
 body button {
     box-sizing: border-box;
     margin: 6px;
-}
-
-.d-none{
-    display:none;
-}
-
-#trash{
-    position: absolute;
-    top:16px;
-    right:16px;
+    background-color: transparent;
     cursor: pointer;
 }
 
-#home{
+body p {
+    margin: 0;
+}
+
+.d-none {
+    display: none;
+}
+
+.appTitle {
+    display: flex;
+    justify-content: space-between;
     position: absolute;
     top:16px;
-    right:16px;
+    height: 32px;
+    text-align: center;
+    border: 0;
+    padding: 16px;
+    width: clamp(300px, 30%, 600px);
+}
+
+.appTitle h1 {
+    margin: 0;
+}
+
+#icons {
+    display: flex;
+    align-items: center;
+}
+
+#icons img {
+    height:1.5em;
+}
+
+#icons a{
+    display: flex;
+    align-items: center;
+}
+
+#home {
+    margin-inline: 1em;
+    cursor: pointer;
+}
+
+#trash {
     cursor: pointer;
 }
 
 .input {
-
+    background-color: #f1f1f1;
     box-sizing: border-box;
-    padding: 3%;
-
+    padding:8px;
+    height:200px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .inputBox {
+    box-sizing: border-box;
+    position: relative;
+    top:32px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    width: 30%;
+    width: clamp(300px, 30%, 600px);
 }
 
 #newNoteText {
-    padding: 1em;
+    box-sizing: border-box;
+    padding: 8px;
     width: 100%;
-    height: 80px;
+    height: 7em;
     resize: none;
 }
 
@@ -63,14 +98,53 @@ body button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    box-sizing: border-box;
+    padding: 1em;
     gap: 10px;
     /* Adjust the space between items */
 }
 
+.noteHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
 .note {
+    box-sizing: border-box;
+    padding: 1em;
     width: 300px;
-    height: 200px;
+    min-height: 200px;
     margin: 5px;
+    background-color: rgb(255, 248, 176);
+    box-shadow: 2px 2px 2px rgb(202, 202, 202);
+    overflow-wrap: break-word;
+    white-space: normal;
+}
 
+.deletednote {
+    box-sizing: border-box;
+    padding: 1em;
+    width: 300px;
+    min-height: 200px;
+    margin: 5px;
+    background-color: rgb(246, 246, 246);
+    box-shadow: 2px 2px 2px rgb(202, 202, 202);
+    overflow-wrap: break-word;
+    white-space: normal;
+}
 
+#delete {
+    margin: 0;
+    border: 0;
+}
+
+#restore {
+    margin:0;
+    border: 0;
+}
+
+#terminate{
+    margin:0;
+    border: 0;
 }
